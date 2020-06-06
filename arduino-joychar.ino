@@ -1,16 +1,4 @@
-#define GAMES_LEN 3
-
-namespace invaders { void start(); }
-namespace race     { void start(); }
-namespace demo     { void start(); }
-
-const void (*games[])() = {invaders::start,
-                           race::start,
-                           demo::start};
-
-const String games_names[] = {"Invaders",
-                              "Race",
-                              "Demo"};
+// connections
 
 #define USE_I2C_LCD
 #define BUZZER_PIN 4
@@ -26,6 +14,22 @@ LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
 #include <LiquidCrystal_I2C.h>
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 #endif
+
+// games
+
+#define GAMES_LEN 3
+
+namespace invaders { void start(); }
+namespace race     { void start(); }
+namespace demo     { void start(); }
+
+const void (*games[])() = {invaders::start,
+                           race::start,
+                           demo::start};
+
+const String games_names[] = {"Invaders",
+                              "Race",
+                              "Demo"};
 
 // directions
 // LEFT and RIGHT are also used for shapes (ored with the type)

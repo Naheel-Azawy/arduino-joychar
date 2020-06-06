@@ -290,6 +290,7 @@ namespace invaders {
     score = 0;
     game_over = false;
     draw();
+    time_now = millis();
   }
 
   void game_loop() {
