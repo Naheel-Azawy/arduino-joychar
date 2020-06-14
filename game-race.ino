@@ -139,10 +139,6 @@ namespace race {
     int period = 700 / log(M_E + score + extra_speed);
     if (millis() >= time_now + period) {
       time_now += period;
-    Serial.println(period);
-    Serial.println(score);
-    Serial.println(extra_speed);
-    Serial.println();
 
       bool mode1 = count++ % 2 == 0;
 

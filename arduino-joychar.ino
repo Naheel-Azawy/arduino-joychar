@@ -17,19 +17,22 @@ LiquidCrystal_I2C lcd(0x27, 16, 2);
 
 // games
 
-#define GAMES_LEN 3
+#define GAMES_LEN 4
 
 namespace invaders { void start(); }
 namespace race     { void start(); }
+namespace dino     { void start(); }
 namespace demo     { void start(); }
 
 const void (*games[])() = {invaders::start,
                            race::start,
+                           dino::start,
                            demo::start};
 
 const String games_names[] = {"Invaders",
                               "Race",
-                              "Demo"};
+                              "Dino",
+                              "Test"};
 
 // directions
 // LEFT and RIGHT are also used for shapes (ored with the type)
