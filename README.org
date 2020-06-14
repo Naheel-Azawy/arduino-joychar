@@ -1,1 +1,15 @@
 * Joychar
+  A mini arduino-based game console.
+
+  [[./res/img.jpg]]
+
+** Games included
+   - Invaders
+   - Race
+   - Dino
+
+** Video
+   [[https://youtu.be/VMLomKBovvU]]
+
+** License
+   GPL-3
